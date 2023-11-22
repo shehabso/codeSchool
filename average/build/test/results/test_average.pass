@@ -1,0 +1,26 @@
+---
+:source:
+  :path: test
+  :file: test_average.c
+:successes:
+- :test: test_average_function
+  :line: 20
+  :message: ''
+  :unity_test_time: 0
+- :test: test_average_fuction_with_zero_size
+  :line: 27
+  :message: ''
+  :unity_test_time: 0
+:failures: []
+:ignores:
+- :test: test_average_NeedToImplement
+  :line: 18
+  :message: Need to Implement average
+  :unity_test_time: 0
+:counts:
+  :total: 3
+  :passed: 2
+  :failed: 0
+  :ignored: 1
+:stdout: []
+:time: 0.05672140000388026
