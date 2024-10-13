@@ -28,10 +28,6 @@ main:
     bx lr  
 ```
 
-moving the value from register to other 
-``` bash
-    MOV R1,R0
-```
 to store value into stack .data
 
 ```bash
