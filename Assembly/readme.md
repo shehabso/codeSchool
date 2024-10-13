@@ -14,6 +14,7 @@ main:
 ```
 **.global main :** is our entry point and must be global. <br /> 
 **.fun main :**  is a function . <br /> 
+**.data :**  to store the value in the stack . <br /> 
 **MOV :** used to put the value into r0 . <br /> 
 **bx :** return to the main point . <br /> 
 **lr :** the register is used to return fro the function . <br /> 
@@ -28,7 +29,10 @@ main:
     bx lr  
 ```
 
-to store value into stack .data
+**.data**: the data segment, which is where global or static data is stored. The data segment is used to define variables and constants that the program might use.
+**.word** :tells the assembler that you want to reserve space for 32-bit data 
+values.  <br /> 
+**list** : This is a label that marks a memory location
 
 ```bash
 .data
