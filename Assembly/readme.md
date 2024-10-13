@@ -12,13 +12,13 @@ main:
     mov R0, #30
     bx lr  
 ```
-**.global main :** is our entry point and must be global.
-**.fun main :**  is a function 
-**MOV :** used to put the value into r0
-**bx :** return to the main point
-**lr :** the register is used to return fro the function 
-**add :**  to add two number 
-**adds :**  to add two number  with set the flag
+**.global main :** is our entry point and must be global. <br /> 
+**.fun main :**  is a function . <br /> 
+**MOV :** used to put the value into r0 . <br /> 
+**bx :** return to the main point . <br /> 
+**lr :** the register is used to return fro the function . <br /> 
+**add :**  to add two number .
+**adds :**  to add two number  with set the flag . <br /> 
 ```bash
 .global main   
 main:    
