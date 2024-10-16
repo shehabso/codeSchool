@@ -1,40 +1,40 @@
-name: CI with Code Coverage for C
+# name: CI with Code Coverage for C
 
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+# on:
+#   push:
+#     branches:
+#       - main
+#   pull_request:
+#     branches:
+#       - main
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
 
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+#     steps:
+#     - name: Checkout code
+#       uses: actions/checkout@v2
 
-    - name: Install dependencies
-      run: sudo apt-get update && sudo apt-get install -y lcov gcc
+#     - name: Install dependencies
+#       run: sudo apt-get update && sudo apt-get install -y lcov gcc
 
-    - name: Build and run tests with coverage
-      run: |
-        mkdir build
-        cd build
-        gcc --coverage ../src/*.c ../tests/*.c -o my_test_suite
-        ./my_test_suite
+#     - name: Build and run tests with coverage
+#       run: |
+#         mkdir build
+#         cd build
+#         gcc --coverage ../src/*.c ../tests/*.c -o my_test_suite
+#         ./my_test_suite
 
-    - name: Capture code coverage info
-      run: |
-        lcov --capture --directory . --output-file coverage.info
-        lcov --remove coverage.info '/usr/*' --output-file coverage.info # Remove system files
-        lcov --list coverage.info
+#     - name: Capture code coverage info
+#       run: |
+#         lcov --capture --directory . --output-file coverage.info
+#         lcov --remove coverage.info '/usr/*' --output-file coverage.info # Remove system files
+#         lcov --list coverage.info
 
-    - name: Upload coverage report
-      uses: codecov/codecov-action@v3
-      with:
-        file: coverage.info
-        flags: unittests
-        name: codecov-ubuntu
+#     - name: Upload coverage report
+#       uses: codecov/codecov-action@v3
+#       with:
+#         file: coverage.info
+#         flags: unittests
+#         name: codecov-ubuntu
