@@ -68,12 +68,12 @@ for post-increment
 ```bash
      LDR R2,[R0],#4
 ```
-operation \
-ADD SUB MUL \ 
-use subs if you  do not know the number or have a negative number \ 
-if yo have a cary use ADDS \
-AND ORR  ANDS to set the flag \
-BGT : branch greater than  \
+operation : ADD SUB MUL <br /> 
+use subs:if you  do not know the number or have a negative number <br /> 
+if yo have a cary use ADDS <br /> 
+AND ORR  ANDS to set the flag <br /> 
+BGT : branch greater than  <br /> 
+
 ``` bash 
 .global _start
 start:
