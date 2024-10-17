@@ -40,8 +40,8 @@ values.  <br />
 list:
     .word 4,5,-9,1,0,2,-3
 ```
-LDR : load data from stack to register 
-the first data in list into R0
+LDR : load data from stack to register \
+the first data in list into R0 \
 ``` bash 
 .global _start
 start:
@@ -68,12 +68,12 @@ for post-increment
 ```bash
      LDR R2,[R0],#4
 ```
-operation 
-ADD SUB MUL 
-use subs if you  do not know the number or have a negative number 
-if yo have a cary use ADDS
-AND ORR  ANDS to set the flag
-BGT : branch greater than 
+operation \
+ADD SUB MUL \ 
+use subs if you  do not know the number or have a negative number \ 
+if yo have a cary use ADDS \
+AND ORR  ANDS to set the flag \
+BGT : branch greater than  \
 ``` bash 
 .global _start
 start:
@@ -87,15 +87,13 @@ greater:
     mov r2,#1
 ```
 void main(void){
-
-
-r1=0;
-r2=0;
-for(int r2=0;r2=<22;r2++){
-    r1+=r2;
- }
- r0=r1;
-}
+r1=0;\
+r2=0;\
+for(int r2=0;r2=<22;r2++){\
+    r1+=r2;\
+ }\
+ r0=r1;\
+}\
 ``` bash 
 .text 
 .global main
@@ -113,7 +111,7 @@ end:
     bx lr
 
 ```
-other way of impelemtation 
+other way of implementation  
 ``` bash 
 .text
 .global main
