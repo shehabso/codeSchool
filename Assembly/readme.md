@@ -1,10 +1,11 @@
 #  Assembly language for ARM processor
 ## Materials
 * https://pages.cs.wisc.edu/~remzi/Classes/537/Spring2018/Discussion/videos.html
-* arm emulator : https://cpulator.01xz.net/?sys=arm
+* **arm emulator:** https://cpulator.01xz.net/?sys=arm
 * https://github.com/palladian1/xv6-annotated
 * https://github.com/rofirrim/raspberry-pi-assembler?tab=readme-ov-file
 * https://thinkingeek.com/ 
+* https://azeria-labs.com/writing-arm-assembly-part-1/
 ```bash
 .global main  
 .func main  
@@ -34,7 +35,6 @@ main:
 **.word** :tells the assembler that you want to reserve space for 32-bit data 
 values.  <br /> 
 **list** : This is a label that marks a memory location
-
 ```bash
 .data
 list:
@@ -86,14 +86,14 @@ start:
 greater:
     mov r2,#1
 ```
-void main(void){
+void main(void){\
 r1=0;\
 r2=0;\
 for(int r2=0;r2=<22;r2++){\
     r1+=r2;\
  }\
  r0=r1;\
-}\
+}
 ``` bash 
 .text 
 .global main
