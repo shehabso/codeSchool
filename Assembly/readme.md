@@ -4,7 +4,7 @@
 * arm emulator : https://cpulator.01xz.net/?sys=arm
 * https://github.com/palladian1/xv6-annotated
 * https://github.com/rofirrim/raspberry-pi-assembler?tab=readme-ov-file
-
+* https://thinkingeek.com/ 
 ```bash
 .global main  
 .func main  
@@ -15,6 +15,7 @@ main:
 **.global main :** is our entry point and must be global. <br /> 
 **.fun main :**  is a function . <br /> 
 **.data :**  to store the value in the stack . <br /> 
+**loop:**  reserved keyword use to interative . <br /> 
 **MOV :** used to put the value into r0 . <br /> 
 **bx :** return to the main point . <br /> 
 **lr :** the register is used to return fro the function . <br /> 
@@ -84,4 +85,49 @@ start:
 
 greater:
     mov r2,#1
+```
+void main(void){
+
+
+r1=0;
+r2=0;
+for(int r2=0;r2=<22;r2++){
+    r1+=r2;
+ }
+ r0=r1;
+}
+``` bash 
+.text 
+.global main
+main:
+    mov r1, #0       /* r1 ← 0 */
+    mov r2, #1       /* r2 ← 1 */
+loop: 
+    cmp r2, #22      /* compare r2 and 22 */
+    bgt end          /* branch if r2 > 22 to end */
+    add r1, r1, r2   /* r1 ← r1 + r1 */
+    add r2, r2, #1   /* r2 ← r2 + 1 */
+    b loop
+end:
+    mov r0, r1       /* r0 ← r1 */
+    bx lr
+
+```
+other way of impelemtation 
+``` bash 
+.text
+.global main
+main:
+    mov r1, #0       /* r1 ← 0 */
+    mov r2, #1       /* r2 ← 1 */
+    b check_loop     /* unconditionally jump at the end of the loop */
+loop: 
+    add r1, r1, r2   /* r1 ← r1 + r1 */
+    add r2, r2, #1   /* r2 ← r2 + 1 */
+check_loop:
+    cmp r2, #22      /* compare r2 and 22 */
+    ble loop         /* branch if r2 &lt;= 22 to the beginning of the loop */
+end:
+    mov r0, r1       /* r0 ← r1 */
+    bx lr
 ```
