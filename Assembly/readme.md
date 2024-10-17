@@ -4,7 +4,6 @@
 * arm emulator : https://cpulator.01xz.net/?sys=arm
 * https://github.com/palladian1/xv6-annotated
 * https://github.com/rofirrim/raspberry-pi-assembler?tab=readme-ov-file
-
 ```bash
 .global main  
 .func main  
