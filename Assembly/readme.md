@@ -1,10 +1,9 @@
 #  Assembly language for ARM processor
 ## Materials
 * https://pages.cs.wisc.edu/~remzi/Classes/537/Spring2018/Discussion/videos.html
-* **arm emulator:** https://cpulator.01xz.net/?sys=arm
+* arm emulator : https://cpulator.01xz.net/?sys=arm
 * https://github.com/palladian1/xv6-annotated
 * https://github.com/rofirrim/raspberry-pi-assembler?tab=readme-ov-file
-* https://thinkingeek.com/ 
 * https://azeria-labs.com/writing-arm-assembly-part-1/
 * https://github.com/mschwartz/assembly-tutorial 
 ```bash
@@ -17,7 +16,6 @@ main:
 **.global main :** is our entry point and must be global. <br /> 
 **.fun main :**  is a function . <br /> 
 **.data :**  to store the value in the stack . <br /> 
-**loop:**  reserved keyword use to interative . <br /> 
 **MOV :** used to put the value into r0 . <br /> 
 **bx :** return to the main point . <br /> 
 **lr :** the register is used to return fro the function . <br /> 
@@ -36,28 +34,27 @@ main:
 **.word** :tells the assembler that you want to reserve space for 32-bit data 
 values.  <br /> 
 **list** : This is a label that marks a memory location
+
 ```bash
 .data
 list:
     .word 4,5,-9,1,0,2,-3
 ```
-LDR : load data from stack to register \
-the first data in list into R0 \
+LDR : load data from stack to register 
+the first data in list into R0
 ``` bash 
 .global _start
 start:
     LDR R0,=list
-   
 .data 
 list:   
     .word 4,5,-9,1,0,2,-3
 ```
-LDR: load the value in the R0 to R1
+**LDR:** load the value in the R0 to R1
 ```bash
      LDR R1,[R0]
 ```
-to get the next item in the list  
-
+getting the next item in the list  
 ```bash
      LDR R2,[R0,#4]
 ```
