@@ -6,6 +6,7 @@
 * https://github.com/rofirrim/raspberry-pi-assembler?tab=readme-ov-file
 * https://thinkingeek.com/ 
 * https://azeria-labs.com/writing-arm-assembly-part-1/
+* https://github.com/mschwartz/assembly-tutorial 
 ```bash
 .global main  
 .func main  
@@ -22,7 +23,7 @@ main:
 **lr :** the register is used to return fro the function . <br /> 
 **add :**  to add two number .
 **adds :**  to add two number  with set the flag . <br /> 
-```bash
+```assembly
 .global main   
 main:    
     mov r1, #3   
