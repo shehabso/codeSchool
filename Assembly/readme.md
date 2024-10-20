@@ -4,8 +4,7 @@
 * arm emulator : https://cpulator.01xz.net/?sys=arm
 * https://github.com/palladian1/xv6-annotated
 * https://github.com/rofirrim/raspberry-pi-assembler?tab=readme-ov-file
-* https://azeria-labs.com/writing-arm-assembly-part-1/
-* https://github.com/mschwartz/assembly-tutorial 
+* https://thinkingeek.com/series/arm-assembler-raspberry-pi/
 ```bash
 .global main  
 .func main  
@@ -16,12 +15,13 @@ main:
 **.global main :** is our entry point and must be global. <br /> 
 **.fun main :**  is a function . <br /> 
 **.data :**  to store the value in the stack . <br /> 
+**loop:**  reserved keyword use to interative . <br /> 
 **MOV :** used to put the value into r0 . <br /> 
 **bx :** return to the main point . <br /> 
 **lr :** the register is used to return fro the function . <br /> 
 **add :**  to add two number .
 **adds :**  to add two number  with set the flag . <br /> 
-```assembly
+```bash
 .global main   
 main:    
     mov r1, #3   
@@ -46,15 +46,17 @@ the first data in list into R0
 .global _start
 start:
     LDR R0,=list
+   
 .data 
 list:   
     .word 4,5,-9,1,0,2,-3
 ```
-**LDR:** load the value in the R0 to R1
+LDR: load the value in the R0 to R1
 ```bash
      LDR R1,[R0]
 ```
-getting the next item in the list  
+to get the next item in the list  
+
 ```bash
      LDR R2,[R0,#4]
 ```
@@ -66,12 +68,12 @@ for post-increment
 ```bash
      LDR R2,[R0],#4
 ```
-operation : ADD SUB MUL <br /> 
-use subs:if you  do not know the number or have a negative number <br /> 
-if yo have a cary use ADDS <br /> 
-AND ORR  ANDS to set the flag <br /> 
-BGT : branch greater than  <br /> 
-
+operation 
+ADD SUB MUL 
+use subs if you  do not know the number or have a negative number 
+if yo have a cary use ADDS
+AND ORR  ANDS to set the flag
+BGT : branch greater than 
 ``` bash 
 .global _start
 start:
@@ -84,13 +86,15 @@ start:
 greater:
     mov r2,#1
 ```
-void main(void){\
-r1=0;\
-r2=0;\
-for(int r2=0;r2=<22;r2++){\
-    r1+=r2;\
- }\
- r0=r1;\
+void main(void){
+
+
+r1=0;
+r2=0;
+for(int r2=0;r2=<22;r2++){
+    r1+=r2;
+ }
+ r0=r1;
 }
 ``` bash 
 .text 
@@ -109,7 +113,7 @@ end:
     bx lr
 
 ```
-other way of implementation  
+other way of impelemtation 
 ``` bash 
 .text
 .global main
@@ -126,4 +130,46 @@ check_loop:
 end:
     mov r0, r1       /* r0 ← r1 */
     bx lr
+```
+variable is 4-byte aligned :save four byte to restore  variable 
+myvar1=3
+myvar2=4
+
+
+```bash 
+/* -- Data section */
+.data
+
+/* Ensure variable is 4-byte aligned */
+.balign 4
+/* Define storage for myvar1 */
+myvar1:
+    /* Contents of myvar1 is just 4 bytes containing value '3' */
+    .word 3
+
+/* Ensure variable is 4-byte aligned */
+.balign 4
+/* Define storage for myvar2 */
+myvar2:
+    /* Contents of myvar2 is just 4 bytes containing value '4' */
+    .word 4
+
+/* -- Code section */
+.text
+
+/* Ensure code is 4 byte aligned */
+.balign 4
+.global main
+main:
+    ldr r1, addr_of_myvar1 /* r1 ← &myvar1 */
+    ldr r1, [r1]           /* r1 ← *r1 */
+    ldr r2, addr_of_myvar2 /* r2 ← &myvar2 */
+    ldr r2, [r2]           /* r2 ← *r2 */
+    add r0, r1, r2         /* r0 ← r1 + r2 */
+    bx lr
+
+/* Labels needed to access data */
+addr_of_myvar1 : .word myvar1
+addr_of_myvar2 : .word myvar2
+
 ```
