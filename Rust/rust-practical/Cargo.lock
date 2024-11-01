@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "variable"
+name = "rust-practical"
 version = "0.1.0"
