@@ -1,11 +1,11 @@
-#define  name of work flow 
-name: my test workflows 
+# #define  name of work flow 
+# name: my test workflows 
 
-#define the trigger event(s)
-on: [push]
-# jobs run in parallel by default ,each staps in sequence 
-jobs:
-  say-hello:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "Hello ,Github Actions!"
+# #define the trigger event(s)
+# on: [push]
+# # jobs run in parallel by default ,each staps in sequence 
+# jobs:
+#   say-hello:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - run: echo "Hello ,Github Actions!"
