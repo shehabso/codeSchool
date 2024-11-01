@@ -5,6 +5,20 @@
 * https://github.com/palladian1/xv6-annotated
 * https://github.com/rofirrim/raspberry-pi-assembler?tab=readme-ov-file
 * https://azeria-labs.com/writing-arm-assembly-part-1/
+### based upon RISC Architecture with enhacememnts to meet requiremnets of emedded applications 
+* A large uniform register file 
+* load -store architecture
+* fixed lenght instructions 
+* 32-bit processors (v1-v7), 64bit processor(v8)
+**Halfword** means 16 bits (two bytes)
+**Word** means 16 bits (four bytes)
+**Doubleword** Means 64 bits (eight bytes)
+
+####  ARM cores impelemnets two basic instruction sets 
+**ARM** instruction set -instructions ara all 32 bits long 
+**THUMB** instructions set ara a mix 16 and 32 bits 
+
+**CPSR**  T=0 no THUMB , T=1 THUMB
 ```bash
 .global main  
 .func main  

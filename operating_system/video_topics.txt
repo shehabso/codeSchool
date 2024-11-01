@@ -1,0 +1,136 @@
+00:02 Comprehensive operating system course covering fundamental and advanced concepts.
+02:41 Operating Systems Course overview and guidelines
+07:28 ALU performs arithmetic and logical functions.
+09:44 Operating system loads the executable file from hard disk to main memory for CPU execution.
+14:33 Operating system acts as a resource manager
+16:51 Operating system controls everything in the computer.
+21:07 Operating system acts as a resource manager and government in controlling program applications.
+23:05 Uni programming OS allows only one program in memory, leading to CPU idle time.
+27:26 Multiprocessor systems run one program at a time
+29:33 Schematic view of multiprogramming operating system
+33:30 Difference between uniprocessor and multiprocessor systems
+35:22 Multiprogramming increases CPU utilization and efficiency
+39:25 Process Management in Operating Systems
+41:30 Secondary storage devices need to be DMA compatible and support address translation for efficient data transfer.
+45:49 Privileged processes in operating systems
+47:57 Mode shifting is necessary for user applications to access OS kernel level services.
+52:05 Multiprogramming increases CPU utilization and efficiency.
+53:47 Architectural requirements for operating systems
+57:41 Operating System Booting and Memory
+59:39 Non-preemptive processes have better response time
+1:03:42 Learn about mode shifting via API and SCI
+1:05:57 Understanding the difference between print F in header and library files
+1:10:28 Shift mode from user to kernel to access fork services
+1:12:39 SVC and Interrupts in Operating Systems
+1:16:58 Understanding how mode shifting is essential in operating systems.
+1:18:51 Operating system mode shifting and system calls
+1:22:39 Understanding kernel mode and user mode operation
+1:24:33 Explanation of child process creation using Fork
+1:28:52 Difference between a program and a process
+1:30:58 Compilation process converts high-level code into low-level instructions
+1:35:20 Dynamic array implementation in C using Maloc
+1:37:31 Process is the program in execution using computer resources.
+1:41:34 Program consists of instruction and data, with data types static and dynamic.
+1:43:36 Activation records in function calls
+1:47:40 Learning VSS extension and process operations
+1:49:40 Transition diagram states and process attributes
+1:53:47 Understanding Process Control Block (PCB) and Process Lifetime Stages
+1:56:02 Understanding resource deallocation and process states
+2:00:15 Operating systems shift processes from main memory to hard disk to manage clutter.
+2:02:35 Process transitions from ready to waiting to running state in an OS
+2:06:58 Processes go directly to running state with no ready stage
+2:09:16 Resource allocation and deallocation in main memory
+2:13:42 Transferring processes from Main memory to disk
+2:15:47 Ready state is the most desirable for suspension
+2:20:07 Understanding process states in Operating Systems
+2:22:03 Processes transitioning in the operating system
+2:25:53 Transition from suspended block to ready state involves swapping/loading to bring process back to main memory
+2:27:46 Operating system resumes process based on resource availability
+2:32:03 Explaining the concept of block and device queues in memory management.
+2:34:12 Overview of Scheduling Cues in Operating Systems
+2:38:16 Dispatcher controls CPU execution for selected process.
+2:40:23 Schedulers in Operating Systems
+2:44:46 Process Switching
+2:46:53 Overview of schedulers and dispatcher in Operating Systems
+2:50:58 Understanding arrival time and waiting time in an Operating System
+2:52:48 Understanding process state transitions and timing
+2:56:56 Preemptive scheduling allows for infinite possible ways to schedule processes.
+2:58:50 Schedule Length Calculation
+3:02:38 Understanding turnaround time in process scheduling
+3:04:32 Discussing scheduling and its types
+3:08:44 Introduction to Process Scheduling
+3:10:49 The Gant chart always starts from zero.
+3:15:02 Calculating waiting time in Operating Systems
+3:17:00 Scheduling processes based on arrival time and execution time
+3:21:04 Understanding Gantt chart and CPU idleness
+3:23:07 Calculate percentage CPU idleness over schedule length
+3:27:11 Understanding the life cycle of a process in Operating Systems
+3:29:22 Process scheduling involved loading from ready to running via dispatcher
+3:33:38 Understanding process scheduling and completion times in operating systems
+3:35:48 Understanding the distinction between transit time and waiting time is crucial.
+3:40:17 Calculate waiting time from chart, not formula
+3:42:22 Understanding process transition from ready to running and then block in Operating Systems
+3:46:38 Process scheduling and termination process in an operating system
+3:48:37 Dispatcher time and process scheduling overview
+3:52:46 Tips for solving process transition questions
+3:54:47 Understanding CPU idleness and scheduling processes
+3:58:47 Calculate CPU overhead for given process scheduling
+4:00:45 Homework questions for CPU efficiency and scheduling overhead
+4:04:54 Process transitions in an operating system
+4:06:48 Scheduling processes with single IO device
+4:10:32 Shortest Job First (SJF) prioritizes processes with the least burst time.
+4:12:26 Scheduling in non-preemptive algorithms
+4:16:18 Scheduling processes based on burst time and process ID.
+4:18:09 Understanding the shortest job first (SJF) algorithm and its preemptive version (SRTF)
+4:22:02 SRTF scheduling preempt shorter burst times
+4:23:49 Understanding Preemption in SRTF Scheduling
+4:27:34 SRTF scheduling algorithm involves checking every time a new process arrives
+4:29:33 Scheduling and preemption in operating systems
+4:33:32 SGF and SRTF algorithms are optimal
+4:35:39 Calculating optimal average waiting time using Shortest Job First algorithm (SJF)
+4:39:28 Calculate waiting time for processes based on scheduling order.
+4:41:23 Predicting burst time using static and dynamic techniques
+4:45:48 Explaining recurrence relation and initial guess concept
+4:47:43 Prediction techniques for CPU burst time
+4:51:55 Processes with high response ratio are given priority in HRR algorithm
+4:54:02 Discussing unfairness in process scheduling based on bus time
+4:58:11 Longest remaining time first (LRTF) algorithm is the opposite of SRTF, scheduling the longest process first.
+5:00:13 SRTF scheduling prioritizes processes based on remaining burst time
+5:04:32 Processes scheduling based on remaining burst time and process ID
+5:06:23 Scheduling based on burst time and process IDs
+5:10:04 Scheduling jobs using Shortest Job First algorithm
+5:12:03 Introduction to priority-based scheduling algorithm
+5:16:06 Priority scheduling in Operating Systems
+5:18:10 Scheduling processes based on priority levels
+5:22:12 Scheduling based on priority and completion time
+5:24:08 Understanding the priority and scheduling of processes
+5:28:10 Introduction to Round Robin algorithm
+5:30:13 In round robin scheduling, processes have to leave after the time quantum
+5:34:20 Scheduling multiple processes based on time Quantum
+5:36:28 Scheduling new and preemptive processes
+5:40:20 Scheduling processes based on arrival times and time quantum in round-robin algorithm.
+5:42:16 Schedule of processes in the RQ
+5:46:22 Efficiency drops to zero with small time Quantum in operating systems
+5:48:32 Determining the suitable time quantum for round-robin scheduling
+5:53:05 Understanding the implications of different values of Q in the context of CPU scheduling
+5:55:39 Understanding CPU scheduling and time quantum
+6:00:00 Explaining CPU scheduling and response time calculation
+6:02:18 Calculation of response time in CPU scheduling
+6:06:37 Different scheduling algorithms applied to different queues based off priorities
+6:08:44 Processes penalized based on running time
+6:12:46 Interprocess communication (IPC) is essential for communication between processes.
+6:14:48 Synchronization is performing an agreed action.
+6:19:00 Synchronization is the coordination of concurrent processes.
+6:21:07 Synchronization in Operating Systems
+6:25:20 Understanding the producer-consumer problem
+6:27:29 Understanding process synchronization and deadlock
+6:31:49 Understanding preemption and process execution
+6:33:49 Understanding race conditions and synchronization
+6:38:03 Importance of Correct Results in Processes
+6:40:09 Producer places item onto buffer when buffer is not full
+6:44:25 Understanding the circular buffer concept in operating systems.
+6:46:20 Implementation of producer and consumer in C language
+6:50:35 Stagnant water and mosquitoes are the main culprits for malaria spreading.
+6:52:32 Synchronization requires critical sections and race conditions.
+6:56:49 Security guard manages access to critical section
+6:58:55 Requirements of Critical Section Problem
