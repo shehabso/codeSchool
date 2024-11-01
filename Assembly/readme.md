@@ -23,7 +23,6 @@
 **CPSR**  T=0 no THUMB , T=1 THUMB
 =======
 * https://github.com/mschwartz/assembly-tutorial 
->>>>>>> b0a7e5c9a641fea3a568d705268ae0f00b1b3f1c
 ```bash
 .global main  
 .func main  
