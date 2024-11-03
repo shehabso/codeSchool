@@ -6,7 +6,7 @@
 * https://github.com/rofirrim/raspberry-pi-assembler?tab=readme-ov-file
 * https://thinkingeek.com/ 
 * https://azeria-labs.com/writing-arm-assembly-part-1/
-<<<<<<< HEAD
+
 ### based upon RISC Architecture with enhacememnts to meet requiremnets of emedded applications 
 * A large uniform register file 
 * load -store architecture
